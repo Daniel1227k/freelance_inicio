@@ -112,7 +112,18 @@ h3 {
   border-radius: 0.5rem;
   width: 90%;
   text-align: center;
+  border: none;
+  cursor: pointer;
   transition: background ease 0.3s;
+}
+.w-sm-100 {
+  width: 100%;
+}
+.flex {
+  display: flex;
+}
+.alinear-derecha {
+  justify-content: flex-end;
 }
 @media (hover: hover) {
   .boton:hover {
@@ -131,19 +142,84 @@ h3 {
   .servicios {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
   }
 }
 .servicio {
+  background: var(--dodger-blue-950);
+  border: 1px solid var(--dodger-blue-600);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  background-image: linear-gradient(
-    to right top,
-    #0099ff,
-    #008be5,
-    #007dcc,
-    #0570b3,
-    #0d629b
-  );
+}
+.servicio h3 {
+  font-weight: normal;
+}
+.servicio p {
+  padding: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.servicio .iconos {
+  height: 15rem;
+  width: 15rem;
+  background-color: var(--dodger-blue-900);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Contacto */
+.formulario {
+  background-color: var(--dodger-blue-950);
+  border: 1px solid var(--dodger-blue-800);
+  width: min(60rem, 100%);
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.formulario fieldset {
+  border: none;
+}
+.formulario legend {
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--dodger-blue-200);
+}
+.campo {
+  margin-bottom: 1rem;
+}
+.campo label {
+  color: var(--dodger-blue-100);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.input-text {
+  width: 100%;
+  color: #fff;
+  background-color: rgb(28, 28, 30);
+  box-shadow: 0 0 0.4vw rgba(0, 0, 0, 0.5), 0 0 0 0.15vw transparent;
+  border-radius: 0.4vw;
+  border: none;
+  outline: none;
+  padding: 1.5rem;
+  transition: 0.4s;
+}
+.campo input:hover {
+  box-shadow: 0 0 0 0.15vw rgba(135, 207, 235, 0.186);
+}
+.campo input:focus {
+  box-shadow: 0 0 0 0.15vw var(--dodger-blue-300);
+}
+.campo textarea {
+  height: 20rem;
+  resize: none;
+}
+.footer {
+  text-align: center;
+  margin-top: 1rem;
 }
